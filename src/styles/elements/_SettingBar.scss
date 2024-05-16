@@ -1,0 +1,17 @@
+.resultConfig {
+    display: flex;
+    justify-content: space-around;
+    img {
+        height: 30px;
+        background-color: #fff;
+    }
+    button {
+    border: none;
+    background-color: #fff;
+    border-radius: 200px;
+    cursor: pointer;
+    &:hover {
+        scale: 1.5;
+    }
+    }
+}

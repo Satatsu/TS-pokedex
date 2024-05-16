@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: #333; 
+    margin: 0; 
+    padding: 0; 
+}
+
+@import "./elements/navbar";
+@import "./elements/CreateCard";
+@import "./elements/SettingBar";
+@import "./elements/NextPokemon";

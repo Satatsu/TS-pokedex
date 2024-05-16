@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navbar from './components/Navbar';
 import './App.css';
+import { Routes , Route } from 'react-router-dom';
+import Home from './page/Home';
+import PokeList from './page/PokeList';
+import './styles/styles.css';
+import PokeDetail from './page/PokeDetail';
+import Fav from './page/Favourite';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/PokeList" element={<PokeList />} />
+        <Route path="/PokeDetail/:id/:name" element={<PokeDetail />} />
+        <Route path="/PokeDetail/:id" element={<PokeDetail />} />
+        <Route path="/Fav" element={<Fav />} />
+      </Routes>
     </div>
   );
 }
