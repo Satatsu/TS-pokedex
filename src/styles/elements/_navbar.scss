@@ -1,26 +1,28 @@
 .navGlobal {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    align-items: center;
-    background-color: #333; 
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #333; 
 
-    ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: space-around;
-        margin: 0;
-        padding: 0;
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 15px;
+      max-width: 150px; 
+      overflow: hidden; 
+      white-space: nowrap; 
+      text-overflow: ellipsis; 
     }
-ul li {
-    margin: 0 15px;
-    max-width: 150px; 
-    overflow: hidden; 
-    white-space: nowrap; 
-    text-overflow: ellipsis; 
-}
-img {
+    
+  }
+
+  .homeBtn {
     height: 50px;
     background-color: #ffffff; 
     padding: 5px;
@@ -28,38 +30,61 @@ img {
     margin: 0 0 0 15px;
 
     &:hover {
-        transform: scale(1.1) rotate(30deg);
+      transform: scale(1.1) rotate(30deg);
     }
-}
-
-
-a {
+  }
+ .img2{
+    background-color: transparent;
+    border: none; 
+    background: none; 
+    padding: 0; 
+    height: 50px;
+    margin-top: 6px;
+  
+  &:focus {
+    outline: none; // Supprimer la bordure de focus
+  }
+ }
+  a {
+    display: flex;
     text-decoration: none;
     color: #fff; 
     font-weight: bold; 
     transition: color 0.3s ease;
     font-family: 'Roboto', sans-serif;
+
+    &:hover {
+      color: #ffcc00; 
+    }
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: row-reverse; 
+    align-items: center;
+   
   
-}
-
-a:hover {
-    color: #ffcc00; 
-}
-}
-
-
-@media screen and (max-width: 768px) {
-    .navGlobal {
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
-
-    img {
-        margin-bottom: 10px; 
-    }
-
     li {
-        margin: 10px 0; 
+      margin: 10px 0; 
     }
-}
 
+    ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .menuButton {
+      display: block;
+      background-color: transparent;
+      border: none;
+    }
+
+    .show {
+      display: flex;
+    }
+  }
+}

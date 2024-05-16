@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import arrow from "../../image/download.png"
+import arrow from "../../image/download.png";
+import CheckNumber from "../checkNumber";
 
 interface NewId {
     beforeId: any;
@@ -58,7 +59,7 @@ const BeforePoke: React.FC<NewId> = (props) => {
             />
           <span>
             <p>{nextPokemon.name}</p>
-            <p>Nº 0{nextPokemon.id}</p>
+            <p><CheckNumber id={nextPokemon.id}/></p>
           </span>
 
         </div>

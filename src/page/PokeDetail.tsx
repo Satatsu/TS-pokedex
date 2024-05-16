@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import NextPoke from '../components/NavPoke';
+import CheckNumber from '../components/checkNumber';
 
 interface Pokemon {
   name: string;
@@ -30,16 +31,15 @@ function PokeDetail() {
   }
 
   return (
-    <div>
+    <div className='global'>
       <div>
         <NextPoke/>
       </div>
-      <h2>Details for Pokémon with ID: {id}</h2>
+      <h2>{data.name}<CheckNumber id={id} /></h2>
       <ul>
         <li>Name: {data.name}</li>
         <li>Height: {data.height}</li>
         <li>Weight: {data.weight}</li>
-        {/* Add other details you want to display here */}
       </ul>
     </div>
   );

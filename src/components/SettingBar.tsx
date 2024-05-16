@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import chevronleft from "../image/download.png";
 import chevronright from "../image/download (1).png";
 import add from "../image/istockphoto-688550958-612x612.jpg";

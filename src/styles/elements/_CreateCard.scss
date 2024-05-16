@@ -8,11 +8,11 @@ body {
     flex-wrap: wrap;
     align-items: center;
     margin: 0; 
-    padding: 250px;
+    padding: 80px;
 }
 @media (max-width: 1282px) {
     .all-card {
-        padding: 250px 0 0 0;
+        padding: 25px 0 0 0;
     }
 }
 
@@ -44,4 +44,15 @@ body {
     }
 
    
+}
+@media (max-width: 550px) {
+    .card {
+        background-color: black;
+        width: 120px;
+        margin: 2px;
+        border-radius: 15px 15px 55px 15px;
+        h3{
+            font-size: 16px;
+        }
+    }
 }

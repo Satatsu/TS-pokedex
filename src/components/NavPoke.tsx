@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import NextPoke from "./elements/NextPokemon";
 import BeforePoke from "./elements/BeforePokemon";
-
-
-interface Result {
-  name: string;
-  id: number;
-}
 
 function NavPoke() {
   const  {id}  = useParams<{ id: string }>();

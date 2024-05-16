@@ -12,7 +12,7 @@ interface Pokemon {
 function PokeList() {
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [limit, setLimit] = useState<number>(55);
+  const [limit, setLimit] = useState<number>(54);
 
   useEffect(() => {
     const fetchData = async () => {

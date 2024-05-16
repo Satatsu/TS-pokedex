@@ -1,0 +1,45 @@
+.homeGlobal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent linear-gradient(60deg, #bcc12d, #333, #1cb3d2) no-repeat;
+    height: 110%;
+    width: 100%;
+  
+    .description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      img{
+        width: 80%;
+        border-radius: 60px;
+        height: auto;
+      }
+  
+      button {
+        background-color: #3498db;
+        border: none;
+        color: white;
+        padding: 12px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #2980b9;
+        }
+  
+        &:active {
+          background-color: #1f618d;
+        }
+      }
+    }
+  }
+  
