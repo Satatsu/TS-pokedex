@@ -38,7 +38,6 @@ const NextPokemon: React.FC<NewId> = (props) => {
 
     fetchData();
   }, [nextId]);
-  console.log(nextPokemon);
 
   const handLeRedirect = () => {
     if (nextPokemon) {

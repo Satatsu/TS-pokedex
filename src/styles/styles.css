@@ -259,4 +259,84 @@ body {
 }
 .homeGlobal .description button:active {
   background-color: #1f618d;
+}
+
+.globalPokeDetail p {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: large;
+  color: #212121;
+  text-transform: uppercase;
+}
+.globalPokeDetail .result {
+  color: rgb(110, 108, 108);
+}
+.globalPokeDetail .infosFetch .pokeStat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+}
+@media screen and (max-width: 660px) {
+  .globalPokeDetail .infosFetch img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.pokeStat {
+  width: 1000px;
+}
+.pokeStat ul {
+  background-color: #e0e0e0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border-radius: 30px;
+  flex-wrap: wrap;
+  width: 599px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.pokeStat .statItem {
+  margin: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.pokeStat .statItem .statName {
+  font-weight: bold;
+  color: #333;
+  margin-top: 5px; /* Add some space between bar and name */
+  text-align: center;
+}
+.pokeStat .statItem .barContainer {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(141, 79, 79, 0.3568627451);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 250px;
+  width: 40px;
+  position: relative;
+}
+.pokeStat .statItem .barContainer .bar {
+  width: 100%;
+  background-color: rgba(76, 175, 79, 0.4078431373);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 14px;
+  transition: height 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  max-height: 100%;
+}
+.pokeStat .statItem .barContainer .barValue {
+  margin-bottom: 2px;
 }/*# sourceMappingURL=styles.css.map */

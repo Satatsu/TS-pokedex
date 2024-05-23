@@ -38,7 +38,6 @@ const BeforePoke: React.FC<NewId> = (props) => {
 
     fetchData();
   }, [beforeId]);
-  console.log(nextPokemon);
 
   const handLeRedirect = () => {
     if (nextPokemon) {
