@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+
 interface PokemonDetailsProps {
   name: string;
 }
@@ -26,7 +27,7 @@ const PokemonDetails: React.FC<PokemonDetailsProps> = ({ name }) => {
       {pokemonDetails ? (
         <div>
           <img src={pokemonDetails.sprites.front_default} alt={pokemonDetails.name} />
-          <h3>{pokemonDetails.name}</h3>
+          <p>{pokemonDetails.name}</p>
         </div>
       ) : (
         <p>Loading details for {name}...</p>

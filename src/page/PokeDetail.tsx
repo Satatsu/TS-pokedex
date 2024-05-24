@@ -52,7 +52,7 @@ function PokeDetail() {
 
   return (
     <section className="globalPokeDetail">
-        <NextPoke />
+      <NextPoke />
       <p>
         {data.name}
         <CheckNumber id={id} />
@@ -66,10 +66,10 @@ function PokeDetail() {
           <PokemonStats stats={stats} />
         </div>
       </div>
-      <div className="chainEvo">
-        <PokeEvolution id={id}/>
+      <div
+        className="chainEvo">
+        <PokeEvolution id={id} />
       </div>
-
     </section>
   );
 }

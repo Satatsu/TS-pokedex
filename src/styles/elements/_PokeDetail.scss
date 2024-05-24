@@ -1,4 +1,18 @@
+.chainEvo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 606px) {
+  .chainEvo{
+    display: block;
+  }}
 .globalPokeDetail {
+ 
     p {
       display: flex;
       justify-content: center;
@@ -15,13 +29,12 @@
           display: flex;
           justify-content: center;
           align-items: center;
-            height: 500px;
             width: 100%;
         }
         
       @media screen and (max-width: 660px) {
          img {
-              width: 100%;
+              width: 80%;
               height: auto;
           }
       }
