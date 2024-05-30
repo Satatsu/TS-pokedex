@@ -3,7 +3,8 @@ import PokemonDetails from "./elements/SeeEvolution";
 import arrow from "../image/icons8-forward-arrow-50.png";
 
 interface EvoProps {
-  id: any;
+  id: string;
+  evolutionChain: EvolutionChain | null;
 }
 
 interface EvolutionChain {
@@ -13,33 +14,7 @@ interface EvolutionChain {
   evolves_to: EvolutionChain[];
 }
 
-const PokeEvo: React.FC<EvoProps> = ({ id }) => {
-  const [evolutionChain, setEvolutionChain] = useState<EvolutionChain | null>(
-    null
-  );
-
-  useEffect(() => {
-    const fetchEvolutionChain = async () => {
-      try {
-        const response = await fetch(
-          `https://pokeapi.co/api/v2/pokemon-species/${id}`
-        );
-        const data = await response.json();
-        const evolutionChainUrl = data.evolution_chain.url;
-
-        const evolutionResponse = await fetch(evolutionChainUrl);
-        const evolutionData = await evolutionResponse.json();
-
-        setEvolutionChain(evolutionData.chain);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchEvolutionChain();
-  }, [id]);
-  console.log(evolutionChain);
-
+const PokeEvolution: React.FC<EvoProps> = ({ id, evolutionChain }) => {
   const renderEvolutionChain = (chain: EvolutionChain) => {
     return (
       <div className="evolution-chain">
@@ -59,7 +34,9 @@ const PokeEvo: React.FC<EvoProps> = ({ id }) => {
   };
 
   return (
-    <div className="evolution-chain-container">
+    <div className="evolution-chain-container"   style={{
+      width: evolutionChain && evolutionChain.evolves_to.length === 0 ? "50%" : "auto",
+    }}>
       <h1>Evolution Chain</h1>
       {evolutionChain ? (
         renderEvolutionChain(evolutionChain)
@@ -70,4 +47,4 @@ const PokeEvo: React.FC<EvoProps> = ({ id }) => {
   );
 };
 
-export default PokeEvo;
+export default PokeEvolution;

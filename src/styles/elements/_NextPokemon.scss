@@ -17,8 +17,9 @@ font-weight: 300;
 font-size: x-large;
 img {
     height: 200px;
-}
-.arrow{
+  
+  }
+  .arrow{
     height: 50px;
     width: auto;
     border-radius: 200px;
@@ -26,6 +27,17 @@ img {
         transform: scale(1.2);
     }
 }
+  @media (max-width: 400px) {
+img {
+     height: 100px;
+}
+
+.arrow {
+height: 20px;
+}
+}
+  
+
 }
 .beforeSwitch  {
 display: flex;
@@ -39,8 +51,8 @@ font-weight: 300;
 font-size: x-large;
 img {
     height: 200px;
-}
-.arrow{
+  }
+  .arrow{
     height: 50px;
     width: auto;
     border-radius: 200px;
@@ -48,4 +60,14 @@ img {
         transform: scale(1.2);
     }
 }
+    @media (max-width: 400px) {
+            font-size: x-small;
+        img {
+             height: 100px;
+        }
+       .arrow {
+        height: 20px;
+       }
+    }
+
 }

@@ -197,6 +197,14 @@ body {
 .nextSwitch .arrow:hover {
   transform: scale(1.2);
 }
+@media (max-width: 400px) {
+  .nextSwitch img {
+    height: 100px;
+  }
+  .nextSwitch .arrow {
+    height: 20px;
+  }
+}
 
 .beforeSwitch {
   display: flex;
@@ -219,6 +227,17 @@ body {
 }
 .beforeSwitch .arrow:hover {
   transform: scale(1.2);
+}
+@media (max-width: 400px) {
+  .beforeSwitch {
+    font-size: x-small;
+  }
+  .beforeSwitch img {
+    height: 100px;
+  }
+  .beforeSwitch .arrow {
+    height: 20px;
+  }
 }
 
 .homeGlobal {
@@ -298,12 +317,32 @@ body {
     height: auto;
   }
 }
+.globalPokeDetail .type {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 10px;
+}
+.globalPokeDetail .type h4 {
+  padding: 10px 20px 10px 20px;
+  border-radius: 30px;
+  margin: 20px;
+  background-color: transparent;
+  border: 2px solid rgb(68, 72, 74);
+}
+.globalPokeDetail .type h4:hover {
+  background-color: rgba(223, 156, 156, 0.737254902);
+  color: white;
+}
 
 .pokeStat {
   width: 1000px;
 }
 .pokeStat ul {
-  background-color: #e0e0e0;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -324,23 +363,22 @@ body {
 .pokeStat .statItem .statName {
   font-weight: bold;
   color: #333;
-  margin-top: 5px; /* Add some space between bar and name */
+  margin-top: 5px;
   text-align: center;
 }
 .pokeStat .statItem .barContainer {
   display: flex;
   justify-content: flex-end;
-  background-color: rgba(141, 79, 79, 0.3568627451);
   border-radius: 5px;
   overflow: hidden;
-  height: 250px;
+  height: 100px;
   width: 40px;
   position: relative;
 }
 .pokeStat .statItem .barContainer .bar {
   width: 100%;
   background-color: rgba(76, 175, 79, 0.4078431373);
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -352,6 +390,35 @@ body {
 }
 .pokeStat .statItem .barContainer .barValue {
   margin-bottom: 2px;
+}
+@media screen and (max-width: 345px) {
+  .pokeStat ul {
+    display: block;
+  }
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.navBar button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: black;
+  border: none;
+  background-color: #fff;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+.navBar button.active {
+  border-color: #4CAF50; /* Couleur de la bordure du bouton actif */
+}
+
+.navBar button:hover {
+  background-color: #f0f0f0;
 }
 
 .evolution-chain-container {
@@ -429,5 +496,57 @@ body {
   }
   .arrow .arrowImg {
     transform: rotate(95deg);
+  }
+}
+.like {
+  height: 30px;
+  cursor: pointer;
+}
+
+.globalStatDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  width: 606px;
+  border-radius: 20px;
+}
+.globalStatDetail h1 {
+  color: rgb(57, 48, 48);
+}
+.globalStatDetail h4 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  height: 20px;
+  width: 30%;
+  margin: 6px;
+}
+.globalStatDetail h4:hover {
+  background-color: black;
+  color: white;
+}
+.globalStatDetail div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 0;
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .globalStatDetail h4 {
+    width: 50%;
+  }
+  .globalStatDetail div {
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=styles.css.map */

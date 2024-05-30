@@ -39,6 +39,27 @@
           }
       }
     }
+    .type {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 10px;
+      h4 {
+        padding: 10px 20px 10px 20px;
+        border-radius: 30px;
+        margin: 20px;
+        background-color: transparent;
+        border: 2px solid rgb(68, 72, 74);
+        &:hover{
+          background-color: #df9c9cbc;
+          color: white;
+        }
+      }
+    }
   }
 
 
@@ -46,7 +67,6 @@
   .pokeStat {
     width: 1000px;
     ul {
-            background-color: #e0e0e0;
             list-style-type: none;
             padding: 0;
             margin: 0;
@@ -69,24 +89,24 @@
         .statName {
             font-weight: bold;
             color: #333;
-            margin-top: 5px; /* Add some space between bar and name */
+            margin-top: 5px; 
             text-align: center;
         }
 
         .barContainer {
-            display: flex;
-            justify-content: flex-end;
-            background-color: #8d4f4f5b;
-            border-radius: 5px;
-            overflow: hidden;
-            height: 250px; 
-            width: 40px; 
-            position: relative;
+          display: flex;
+          justify-content: flex-end;
+          border-radius: 5px;
+          overflow: hidden;
+          height: 100px;
+          width: 40px;
+          position: relative;
+      
 
             .bar {
                 width: 100%; 
                 background-color: #4caf4f68;
-                color: white;
+                color: black;
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
@@ -102,4 +122,32 @@
             }
         }
     }
+    @media screen and (max-width: 345px) {
+      ul {
+        display: block;
+    }
+    }
+}
+.navBar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.navBar button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: black;
+  border: none;
+  background-color: #fff;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+.navBar button.active {
+  border-color: #4CAF50; /* Couleur de la bordure du bouton actif */
+}
+
+.navBar button:hover {
+  background-color: #f0f0f0;
 }
