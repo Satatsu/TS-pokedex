@@ -240,27 +240,68 @@ body {
   }
 }
 
-.homeGlobal {
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.homeContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #46667b;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  background: #46667b;
+  color: white;
+  padding: 20px 0;
+}
+
+.homeGlobal {
+  width: 100%;
+  background: linear-gradient(60deg, #ebeccb, #9e8b8b, #687578);
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: transparent linear-gradient(60deg, #bcc12d, #333, #1cb3d2) no-repeat;
-  height: 110%;
-  width: 100%;
 }
-.homeGlobal .description {
+.homeGlobal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 152, 219, 0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.description {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 2;
 }
-.homeGlobal .description img {
-  width: 80%;
+.description img {
+  width: 100%;
   border-radius: 60px;
-  height: auto;
+  height: 200px;
 }
-.homeGlobal .description button {
-  background-color: #3498db;
+.description button {
+  background-color: #46667b;
   border: none;
   color: white;
   padding: 12px 24px;
@@ -273,13 +314,18 @@ body {
   border-radius: 6px;
   transition: background-color 0.3s ease;
 }
-.homeGlobal .description button:hover {
+.description button:hover {
   background-color: #2980b9;
 }
-.homeGlobal .description button:active {
+.description button:active {
   background-color: #1f618d;
 }
 
+@media (max-width: 1000px) {
+  .homeGlobal {
+    flex-wrap: wrap;
+  }
+}
 .chainEvo {
   display: flex;
   flex-direction: row;
@@ -548,5 +594,100 @@ body {
   .globalStatDetail div {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.favourite-container {
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.favourite-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+.favourite-container .remove-all-button {
+  background-color: #ff4444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.favourite-container .remove-all-button:hover {
+  background-color: #cc0000;
+}
+.favourite-container .pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+.favourite-container .pokemon-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s;
+}
+.favourite-container .pokemon-card:hover {
+  transform: translateY(-5px);
+}
+.favourite-container .pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
+.favourite-container .pokemon-card img.liked-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.favourite-container .pokemon-card p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  color: #666;
+}
+.favourite-container .no-favourites {
+  font-size: 18px;
+  color: #666;
+}
+
+.pokemon-cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+.pokemon-cards-container .pokemon-card {
+  flex: 0 0 auto;
+  padding: 10px;
+  text-align: center;
+  max-width: 200px;
+}
+.pokemon-cards-container .pokemon-card img {
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 600px) {
+  .pokemon-cards-container .pokemon-card {
+    max-width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width: 400px) {
+  .pokemon-cards-container .pokemon-card {
+    max-width: calc(100% - 20px);
   }
 }/*# sourceMappingURL=styles.css.map */

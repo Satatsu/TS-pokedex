@@ -5,29 +5,38 @@ import fav from "../image/favorites.png";
 
 function Home() {
 
-const handLeRedirect = () => {
-  window.location.href = "/Fav";
-}
-const handLeRedirect1 = () => {
-  window.location.href = "/PokeList";
-}
-const handLeRedirect2 = () => {
-  window.location.href = "/PokeDetail/6/charizard";
-}
+  const handLeRedirect = () => {
+    window.location.href = "/Fav";
+  }
+  const handLeRedirect1 = () => {
+    window.location.href = "/PokeList";
+  }
+  const handLeRedirect2 = () => {
+    window.location.href = "/PokeDetail/6/charizard";
+  }
 
   return (
-    <div className='homeGlobal' style={{ padding: '20px', boxSizing: 'border-box' }}>
-      <span className='description'>
-        <img style={{ width: '60%', borderRadius: "60px" }} src={charizard} alt="" />
-        <button onClick={handLeRedirect2}>see Pokemon</button>
-      <img style={{marginTop: '150px'}}  src={acceuil} alt="" />
-        <button onClick={handLeRedirect1}>search Pokemon</button>
-      <img style={{width: '60%',marginTop: '150px'}}  src={fav} alt="" />
-        <button onClick={handLeRedirect}>see favourite</button>
-      </span>
+    <div className='homeContainer'>
+      <div className='title'>
+        <h1>Welcome to Your Pokedex</h1>
+      </div>
+      <div className='homeGlobal'>
+        <span className='description'>
+          <img src={charizard} alt="Mega Charizard X" />
+          <button onClick={handLeRedirect2}>See Pokemon</button>
+        </span>
+        <span className="description">
+          <img src={acceuil} alt="Pokedex Home" />
+          <button onClick={handLeRedirect1}>Search Pokemon</button>
+        </span>
+        <span className="description">
+          <img src={fav} alt="Favorites" />
+          <button onClick={handLeRedirect}>See Favourite</button>
+        </span>
+      </div>
+      <div className='footer'></div>
     </div>
   );
 }
-
 
 export default Home;

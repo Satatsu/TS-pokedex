@@ -1,4 +1,5 @@
 import React from 'react';
+import error from '../image/404-pages.png'
 
 interface CheckNumberProps {
   id: any;
@@ -21,7 +22,7 @@ const CheckNumber: React.FC<CheckNumberProps> = ({ id }) => {
       result = <div className="result">_Nº {id}</div>;
       break;
     default:
-      result = <div className="default-result">Résultat par défaut</div>;
+      result = <p>Loading...</p>
   }
 
   return result;

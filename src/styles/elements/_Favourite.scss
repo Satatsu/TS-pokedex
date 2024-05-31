@@ -1,0 +1,78 @@
+.favourite-container {
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+
+  
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+  
+    .remove-all-button {
+      background-color: #ff4444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #cc0000;
+      }
+    }
+  
+    .pokemon-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+    }
+  
+    .pokemon-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 150px;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.2s;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      img {
+        width: 100px;
+        height: 100px;
+  
+        &.liked-icon {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 5px;
+          right: 5px;
+        }
+      }
+  
+      p {
+        margin: 10px 0 0;
+        font-size: 18px;
+        color: #666;
+      }
+    }
+  
+    .no-favourites {
+      font-size: 18px;
+      color: #666;
+    }
+  }
+  

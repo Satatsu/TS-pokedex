@@ -16,9 +16,9 @@ const SearchBar: React.FC<SearchBarProps> = ({ setLimit, setSearchTerm }) => {
       <button onClick={() => setLimit((limit) => limit + 55)}>
         <img src={chevronleft} alt="" />
       </button>
-      <button onClick={() => setLimit((limit) => limit - 10)}>
+      {/* <button onClick={() => setLimit((limit) => limit - 10)}>
         <img src={less} alt="" />
-      </button>
+      </button> */}
       <input
         type="text"
         placeholder="Rechercher un Pokémon..."
@@ -36,9 +36,9 @@ const SearchBar: React.FC<SearchBarProps> = ({ setLimit, setSearchTerm }) => {
           fontSize: "16px",
         }}
       />
-      <button onClick={() => setLimit((limit) => limit + 10)}>
+      {/* <button onClick={() => setLimit((limit) => limit + 10)}>
         <img src={add} alt="" />
-      </button>
+      </button> */}
       <button onClick={() => setLimit((limit) => (limit = 1025))}>
         <img src={chevronright} alt="" />
       </button>

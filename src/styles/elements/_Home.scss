@@ -1,45 +1,97 @@
+$primary-color: #46667b;
+$secondary-color: #2980b9;
+$active-color: #1f618d;
+$background-gradient: linear-gradient(60deg, #ebeccb, #9e8b8b, #687578);
+$filter-color: rgba(52, 152, 219, 0.5); 
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh; // Définir la hauteur minimale à 100% de la vue
+  background-color: $primary-color;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  background: $primary-color;
+  color: white;
+  padding: 20px 0;
+}
+
 .homeGlobal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: transparent linear-gradient(60deg, #bcc12d, #333, #1cb3d2) no-repeat;
-    height: 110%;
+  width: 100%;
+  background: $background-gradient;
+  position: relative;
+  padding: 0; // Removed padding to ensure no gap
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-  
-    .description {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      img{
-        width: 80%;
-        border-radius: 60px;
-        height: auto;
-      }
-  
-      button {
-        background-color: #3498db;
-        border: none;
-        color: white;
-        padding: 12px 24px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 10px;
-        cursor: pointer;
-        border-radius: 6px;
-        transition: background-color 0.3s ease;
-  
-        &:hover {
-          background-color: #2980b9;
-        }
-  
-        &:active {
-          background-color: #1f618d;
-        }
-      }
+    height: 100%;
+    background: $filter-color;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 2; // Ensure content is above the filter
+
+  img {
+    width: 100%;
+    border-radius: 60px;
+    height: 200px;
+  }
+
+  button {
+    background-color: $primary-color;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+
+    &:active {
+      background-color: $active-color;
     }
   }
-  
+}
+
+@media (max-width: 1000px) {
+  .homeGlobal {
+    flex-wrap: wrap;
+  }
+}

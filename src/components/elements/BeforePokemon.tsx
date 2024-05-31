@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import arrow from "../../image/download.png";
 import CheckNumber from "../checkNumber";
+import error from '../../image/404-pages.png'
 
 interface NewId {
     beforeId: any;
@@ -10,9 +11,9 @@ interface BeforePoke {
   name: string;
   id: number;
   sprites: {
-    other: {
-      home: {
-        front_default: string;
+    other?: {
+      home?: {
+        front_default?: string;
       };
     };
   };
@@ -39,7 +40,7 @@ const BeforePoke: React.FC<NewId> = (props) => {
     fetchData();
   }, [beforeId]);
 
-  const handLeRedirect = () => {
+  const handleRedirect = () => {
     if (nextPokemon) {
       window.location.href = `/pokeDetail/${nextPokemon.id}`;
     } else {
@@ -50,20 +51,21 @@ const BeforePoke: React.FC<NewId> = (props) => {
   return (
     <div>
       {nextPokemon ? (
-          <div className="beforeSwitch">
-        <img onClick={handLeRedirect} className="arrow" src={arrow} alt="" />
-            <img
-              src={nextPokemon.sprites.other.home.front_default}
-              alt={nextPokemon.name}
-            />
+        <div className="beforeSwitch">
+          <img onClick={handleRedirect} className="arrow" src={arrow} alt="" />
+          <img
+            src={nextPokemon.sprites?.other?.home?.front_default || ''}
+            alt={nextPokemon.name}
+          />
           <span>
             <p>{nextPokemon.name}</p>
-            <p><CheckNumber id={nextPokemon.id}/></p>
+            <p><CheckNumber id={nextPokemon.id} /></p>
           </span>
-
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="nextSwitch">
+           <img style={{height: '80px' , marginTop: '48px', marginRight: '10px'}} className="default-result" src={error} alt="" />
+        </div>
       )}
     </div>
   );

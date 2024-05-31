@@ -1,3 +1,4 @@
+/* App.css */
 .App {
   text-align: center;
 }
@@ -28,11 +29,116 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff; 
+}
+
+.loading-text {
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.loading-text span {
+  animation: jump 1.5s infinite;
+}
+
+.loading-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-text span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading-text span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loading-text span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loading-text span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.loading-text span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.loading-text span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+@keyframes jump {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    color: black;
+  }
+  40% {
+    transform: translateY(-20px);
+    color: orange;
+  }
+  60% {
+    transform: translateY(-10px);
+    color: orange;
+  }
+}
+
+.loading-spinner {
+  width: 100px; 
+  height: 100px; 
+}
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* Add this CSS to the appropriate CSS file */
+
+.scroll-container {
+  height: 80vh; /* Adjust the height as needed */
+  overflow-y: scroll;
+}
+
+.all-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the gap as needed */
+  padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.active {
+      background-color: #007bff;
+      color: white;
+      border: 1px solid #007bff;
+    }
+
+    &:hover:not(.active) {
+      background-color: #ddd;
+    }
   }
 }

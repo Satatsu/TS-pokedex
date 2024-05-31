@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import arrow from "../../image/download (1).png"
 import CheckNumber from "../checkNumber";
+import error from "../../image/404-pages.png"
 
 interface NewId {
   nextId: any;
@@ -63,7 +64,11 @@ const NextPokemon: React.FC<NewId> = (props) => {
           <img  onClick={handLeRedirect} className="arrow" src={arrow} alt="not-find" />
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="nextSwitch">
+           <img style={{height: '80px' , marginTop: '48px', marginRight: '10px'}} className="default-result" src={error} alt="" />
+       <img  onClick={handLeRedirect} style={{marginTop: '55px'}} className="arrow" src={arrow} alt="not-find" />
+        </div>
+      
       )}
     </div>
   );

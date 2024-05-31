@@ -5,8 +5,8 @@ import CheckNumber from "../components/checkNumber";
 import PokemonStats from "../components/PokeStats";
 import StatDetail from "../components/StatDetail";
 import PokeEvolution from "../components/PokeEvolution";
-import liked from "../image/ajouter-des-likes (1).png"
-import like from "../image/ajouter-des-likes.png"
+import LikeSystem from "../components/LikeSystem";
+import PokemonCards from "../components/SeePokeCard";
 
 interface Pokemon {
   name: string;
@@ -15,13 +15,15 @@ interface Pokemon {
   stats: Stat[];
   sprites: {
     other: {
-      home: { front_default: string };
+      home: {
+        front_default: string;
+        front_shiny: string;
+      };
     };
   };
   abilities: Ability[];
   types: Type[];
 }
-
 interface Stat {
   base_stat: number;
 }
@@ -51,9 +53,11 @@ interface EvolutionChain {
 
 function PokeDetail() {
   const { id } = useParams<{ id: string }>();
+  const numericId = id ? parseInt(id, 10) : NaN;
   const [data, setData] = useState<Pokemon | null>(null);
   const [evolutionChain, setEvolutionChain] = useState<EvolutionChain | null>(null);
   const [selectedComponent, setSelectedComponent] = useState<string>('PokemonStats');
+  const [toggle, setTogle] = useState<boolean>(false);
 
   useEffect(() => {
     if (!id) return;
@@ -102,20 +106,29 @@ function PokeDetail() {
     setSelectedComponent(component);
   };
 
+  const handReturnImg = () => {
+   setTogle(!toggle)
+  }
+
   return (
     <section className="globalPokeDetail">
       <NextPoke />
       <p>
         {data.name}
-        <CheckNumber id={id} />
+        <CheckNumber id={numericId} />
       </p>
-      <img className="like" src={like} alt="" />
+      <LikeSystem id={numericId}/>
       <div className="infosFetch">
-
-        <img
+      {!toggle ?
+        <img style={{cursor: 'pointer'}} onClick={handReturnImg}
           src={data.sprites.other.home.front_default}
           alt={data.name}
-        />
+        /> :
+        <img style={{cursor: 'pointer'}} onClick={handReturnImg}
+        src={data.sprites.other.home.front_shiny}
+        alt={data.name}
+      />
+}
       <div className="type">
           {data.types.map((type, index) => (
           <h4 key={index}>{type.type.name}</h4>
@@ -138,6 +151,9 @@ function PokeDetail() {
         <div className="pokeStat">  
           {selectedComponent === 'PokemonStats' ? <PokemonStats stats={stats} /> : <StatDetail statPhysical={statPhysical} />}
         </div>
+      </div>
+      <div className="pokeCard">
+        <PokemonCards pokemonName={data.name}/>
       </div>
       {id && (
         <div

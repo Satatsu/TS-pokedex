@@ -15,11 +15,16 @@ const CreateCard: React.FC<CreateCardProps> = ({ pokemonId, name }) => {
     return (
         <div onClick={handLeRedirect} className='card' id={`${pokemonId}`}>
             {!imageError && (
-                <img
-                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonId}.png`}
-                    alt={name}
-                    onError={() => setImageError(true)}
-                />
+            <img
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemonId}.png`}
+            alt={name}
+            onError={() => setImageError(true)}
+            style={{
+              transition: 'transform 0.3s ease-in-out',
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
+            onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+          />
             )}
             {imageError && (
                 <img
