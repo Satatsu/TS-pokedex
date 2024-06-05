@@ -105,18 +105,18 @@
     transform: rotate(360deg);
   }
 }
-/* Add this CSS to the appropriate CSS file */
+
 
 .scroll-container {
-  height: 80vh; /* Adjust the height as needed */
+  height: 80vh; 
   overflow-y: scroll;
 }
 
 .all-card {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Adjust the gap as needed */
-  padding: 10px; /* Optional: Add padding for better spacing */
+  gap: 10px; 
+  padding: 10px; 
 }
 
 .pagination {

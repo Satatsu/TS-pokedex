@@ -1,7 +1,7 @@
 import {useState} from 'react'
-import homeImage from '../image/pokeball-new-nintendo-2ds-xl-pokemon-go-nintendo-3ds-fantasy-trademark-circle-symbol-logo-brand.png'
-import menuImage1 from '../image/icons8-menu-128.png';
-import menuImage2 from '../image/icons8-cross-50.png';
+import homeImage from '../../image/pokeball-new-nintendo-2ds-xl-pokemon-go-nintendo-3ds-fantasy-trademark-circle-symbol-logo-brand.png'
+import menuImage1 from '../../image/icons8-menu-128.png';
+import menuImage2 from '../../image/icons8-cross-50.png';
 
 const Navbar: React.FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);

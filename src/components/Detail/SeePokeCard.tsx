@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import chargement from '../image/chargement-de-cercle.png';
+import chargement from '../../image/chargement-de-cercle.png';
 
 interface PokemonCard {
   id: string;

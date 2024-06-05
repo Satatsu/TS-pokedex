@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import NextPoke from "../components/NavPoke";
-import CheckNumber from "../components/checkNumber";
-import PokemonStats from "../components/PokeStats";
-import StatDetail from "../components/StatDetail";
-import PokeEvolution from "../components/PokeEvolution";
-import LikeSystem from "../components/LikeSystem";
-import PokemonCards from "../components/SeePokeCard";
+import NextPoke from "../components/List/NavPoke";
+import CheckNumber from "../components/elements/checkNumber";
+import PokemonStats from "../components/Detail/PokeStats";
+import StatDetail from "../components/Detail/StatDetail";
+import PokeEvolution from "../components/Detail/PokeEvolution";
+import LikeSystem from "../components/Fav/LikeSystem";
+import PokemonCards from "../components/Detail/SeePokeCard";
 
 interface Pokemon {
   name: string;

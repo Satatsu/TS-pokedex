@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import liked from "../image/ajouter-des-likes (1).png";
-import like from "../image/ajouter-des-likes.png";
+import liked from "../../image/ajouter-des-likes (1).png";
+import like from "../../image/ajouter-des-likes.png";
 
 interface LikeSystemProps {
   id: number;

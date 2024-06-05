@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import CreateCard from "../components/CreateCard";
-import SettingBar from "../components/SettingBar";
+import CreateCard from "../components/Detail/CreateCard";
+import SettingBar from "../components/List/SettingBar";
 import imgAccueil from "../image/xaj5LX.jpg";
 
 interface Pokemon {

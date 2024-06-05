@@ -54,10 +54,6 @@
         margin: 20px;
         background-color: transparent;
         border: 2px solid rgb(68, 72, 74);
-        &:hover{
-          background-color: #df9c9cbc;
-          color: white;
-        }
       }
     }
   }
@@ -145,7 +141,7 @@
 }
 
 .navBar button.active {
-  border-color: #4CAF50; /* Couleur de la bordure du bouton actif */
+  border-color: #4CAF50; 
 }
 
 .navBar button:hover {

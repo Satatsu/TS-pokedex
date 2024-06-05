@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import arrow from "../../image/download.png";
-import CheckNumber from "../checkNumber";
+import CheckNumber from "./checkNumber";
 import error from '../../image/404-pages.png'
 
 interface NewId {

@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import NextPoke from "./elements/NextPokemon";
-import BeforePoke from "./elements/BeforePokemon";
+import NextPoke from "../elements/NextPokemon";
+import BeforePoke from "../elements/BeforePokemon";
 
 function NavPoke() {
   const  {id}  = useParams<{ id: string }>();

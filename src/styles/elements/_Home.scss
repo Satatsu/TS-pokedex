@@ -17,7 +17,7 @@ body, html {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  min-height: 100vh; // Définir la hauteur minimale à 100% de la vue
+  min-height: 100vh; 
   background-color: $primary-color;
 }
 
@@ -25,15 +25,16 @@ body, html {
   width: 100%;
   text-align: center;
   background: $primary-color;
-  color: white;
+  color: rgb(29, 26, 26);
   padding: 20px 0;
+  border-bottom: 1px solid rgb(238, 235, 235);
 }
 
 .homeGlobal {
   width: 100%;
-  background: $background-gradient;
+  background: $primary-color;
   position: relative;
-  padding: 0; // Removed padding to ensure no gap
+  padding: 0; 
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -46,7 +47,6 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: $filter-color;
     z-index: 1;
     pointer-events: none;
   }
@@ -58,7 +58,7 @@ body, html {
   align-items: center;
   padding: 30px;
   position: relative;
-  z-index: 2; // Ensure content is above the filter
+  z-index: 2; 
 
   img {
     width: 100%;
@@ -67,7 +67,7 @@ body, html {
   }
 
   button {
-    background-color: $primary-color;
+    background-color: #1f618d;
     border: none;
     color: white;
     padding: 12px 24px;
