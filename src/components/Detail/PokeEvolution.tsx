@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PokemonDetails from "../elements/SeeEvolution";
 import arrow from "../../image/icons8-forward-arrow-50.png";
 

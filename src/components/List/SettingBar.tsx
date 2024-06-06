@@ -1,8 +1,6 @@
 import React from "react";
 import chevronleft from "../../image/download.png";
 import chevronright from "../../image/download (1).png";
-import add from "../../image/istockphoto-688550958-612x612.jpg";
-import less from "../../image/download (3).png";
 
 interface SearchBarProps {
   setLimit: React.Dispatch<React.SetStateAction<number>>; // fonctions de mise à jour de l'état (useState)

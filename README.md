@@ -1,47 +1,56 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
 # TS-pokedex
+### <span style="color: #3498db;">Technologies : </span>
+- The website is coded using:
+  - React (TSX)
+  - TypeScript
+  - Scss
+## <span style="color: #5d7bc7">_Getting Started</span>
+```bash
+cd TS-pokedex
+```
+```bash
+npm install
+```
+```bash
+npm start
+```
+# <span style="color: #7669d1">_Features</span> :
+## Home Page 
+-  Welcome page with a user-friendly design to engage users from the start.
+
+<img src="./public/image/Home.png">
+
+## List Page
+- Display a comprehensive list of Pokémon with options to view more details.
+
+<img src="./public/image/PokeList.png">
+
+### Search-Bar
+- Search for your favorite Pokémon quickly and easily using the search functionality.
+
+<img src="./public/image/search.png">
+
+## Detail Page
+- Detailed information about each Pokémon including stats, abilities, and more.
+
+<img src="./public/image/Switch.png">
+
+### Favourite and Shiny
+- Mark Pokémon as your favorites or toggle their shiny versions for a unique display.
+
+<img src="./public/image/Shiny.png">
+
+### PokeCard
+- Visual representation of each Pokémon's stats and other key information like their entire map.
+
+<img src="./public/image/graphCard.png">
+
+### Evolution-Chain
+- View the evolution chain of each Pokémon to see their development stages.
+
+<img src="./public/image/Evo.png">
+
+## Favourite Page
+- Access a personalized list of your favorite Pokémon for quick reference.
+
+<img src="./public/image/fav.png">

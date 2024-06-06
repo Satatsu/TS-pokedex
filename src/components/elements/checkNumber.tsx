@@ -1,5 +1,4 @@
 import React from 'react';
-import error from '../image/404-pages.png'
 
 interface CheckNumberProps {
   id: any;
