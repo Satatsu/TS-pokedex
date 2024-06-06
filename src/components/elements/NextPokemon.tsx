@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import arrow from "../../image/download (1).png"
+import arrow from "../../image/download (1).png";
 import CheckNumber from "./checkNumber";
-import error from "../../image/404-pages.png"
+import error from "../../image/404-pages.png";
 
 interface NewId {
   nextId: any;
 }
 
-interface NextPokemon {
+interface PokemonData {
   name: string;
   id: number;
   sprites: {
@@ -22,7 +22,7 @@ interface NextPokemon {
 const NextPokemon: React.FC<NewId> = (props) => {
   const { nextId } = props;
 
-  const [nextPokemon, setNextPokemon] = useState<NextPokemon | null>(null);
+  const [nextPokemon, setNextPokemon] = useState<PokemonData | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +30,7 @@ const NextPokemon: React.FC<NewId> = (props) => {
         const response = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${nextId}`
         );
-        const data: NextPokemon = await response.json();
+        const data: PokemonData = await response.json();
         setNextPokemon(data);
       } catch (error) {
         console.log(error);
@@ -40,7 +40,7 @@ const NextPokemon: React.FC<NewId> = (props) => {
     fetchData();
   }, [nextId]);
 
-  const handLeRedirect = () => {
+  const handleRedirect = () => {
     if (nextPokemon) {
       window.location.href = `/pokeDetail/${nextPokemon.id}`;
     } else {
@@ -61,14 +61,13 @@ const NextPokemon: React.FC<NewId> = (props) => {
             src={nextPokemon.sprites.other.home.front_default}
             alt={nextPokemon.name}
           />
-          <img  onClick={handLeRedirect} className="arrow" src={arrow} alt="not-find" />
+          <img onClick={handleRedirect} className="arrow" src={arrow} alt="not-find" />
         </div>
       ) : (
         <div className="nextSwitch">
-           <img style={{height: '80px' , marginTop: '48px', marginRight: '10px'}} className="default-result" src={error} alt="" />
-       <img  onClick={handLeRedirect} style={{marginTop: '55px'}} className="arrow" src={arrow} alt="not-find" />
+          <img style={{ height: '80px', marginTop: '48px', marginRight: '10px' }} className="default-result" src={error} alt="" />
+          <img onClick={handleRedirect} style={{ marginTop: '55px' }} className="arrow" src={arrow} alt="not-find" />
         </div>
-      
       )}
     </div>
   );

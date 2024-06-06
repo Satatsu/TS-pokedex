@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import arrow from "../../image/download.png";
 import CheckNumber from "./checkNumber";
-import error from '../../image/404-pages.png'
+import error from '../../image/404-pages.png';
 
 interface NewId {
     beforeId: any;
 }
 
-interface BeforePoke {
+interface PokemonData {
   name: string;
   id: number;
   sprites: {
@@ -22,7 +22,7 @@ interface BeforePoke {
 const BeforePoke: React.FC<NewId> = (props) => {
   const { beforeId } = props;
 
-  const [nextPokemon, setNextPokemon] = useState<BeforePoke | null>(null);
+  const [nextPokemon, setNextPokemon] = useState<PokemonData | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +30,7 @@ const BeforePoke: React.FC<NewId> = (props) => {
         const response = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${beforeId}`
         );
-        const data: BeforePoke = await response.json();
+        const data: PokemonData = await response.json();
         setNextPokemon(data);
       } catch (error) {
         console.log(error);
