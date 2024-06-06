@@ -9,7 +9,6 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-    // Changement de l'image du menu
     setMenuImage(showMenu ? menuImage1 : menuImage2);
   };
 
