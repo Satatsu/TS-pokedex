@@ -19,6 +19,7 @@ function Home() {
     <div className='homeContainer'>
       <div className='title'>
         <h1>Welcome to Your Pokedex</h1>
+        <p>Created by Satatsu, code here:<a href="https://github.com/Satatsu/TS-pokedex">https://github.com/Satatsu/TS-pokedex</a> </p>
       </div>
       <div className='homeGlobal'>
         <span className='description'>
