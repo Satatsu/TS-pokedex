@@ -1,4 +1,5 @@
 # TS-pokedex
+## The website : http://satatsu-pokedex.infinityfreeapp.com
 ### <span style="color: #3498db;">Technologies : </span>
 - The website is coded using:
   - React (TSX)
